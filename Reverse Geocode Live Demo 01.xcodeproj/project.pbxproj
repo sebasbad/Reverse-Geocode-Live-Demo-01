@@ -13,6 +13,7 @@
 		4166DD751CAEBDD900954B7D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4166DD731CAEBDD900954B7D /* Main.storyboard */; };
 		4166DD771CAEBDD900954B7D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4166DD761CAEBDD900954B7D /* Assets.xcassets */; };
 		4166DD7A1CAEBDD900954B7D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4166DD781CAEBDD900954B7D /* LaunchScreen.storyboard */; };
+		4166DD821CAEC26100954B7D /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4166DD811CAEC26100954B7D /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		4166DD761CAEBDD900954B7D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4166DD791CAEBDD900954B7D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4166DD7B1CAEBDD900954B7D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4166DD811CAEC26100954B7D /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4166DD821CAEC26100954B7D /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +45,7 @@
 		4166DD5E1CAEBDD900954B7D = {
 			isa = PBXGroup;
 			children = (
+				4166DD811CAEC26100954B7D /* MapKit.framework */,
 				4166DD691CAEBDD900954B7D /* Reverse Geocode Live Demo 01 */,
 				4166DD681CAEBDD900954B7D /* Products */,
 			);
