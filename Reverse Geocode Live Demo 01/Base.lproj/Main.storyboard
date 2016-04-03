@@ -58,6 +58,9 @@
                             <constraint firstItem="r5p-ml-Xmd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="vwT-IS-4N2"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="mapView" destination="r5p-ml-Xmd" id="sm8-sd-V8q"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
