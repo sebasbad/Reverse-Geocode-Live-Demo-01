@@ -10,6 +10,9 @@
 #import "ViewController.h"
 
 @interface ViewController ()
+
+@property (strong, nonatomic) CLGeocoder *geocoder;
+
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
 @property (weak, nonatomic) IBOutlet UILabel *reverseGeocodeLabel;
 
@@ -19,7 +22,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+
+    self.geocoder = [[CLGeocoder alloc] init];
 }
 
 - (void)didReceiveMemoryWarning {
