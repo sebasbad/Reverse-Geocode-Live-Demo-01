@@ -34,7 +34,18 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
 - (IBAction)reverseGeocodeTapped:(id)sender {
+}
+
+- (CLLocationCoordinate2D)locationAtCenterOfMapView {
+    
+    // The center in ImageView coord space
+    CGPoint centerOfPin = CGPointMake(CGRectGetMidX(self.pinIconImageView.bounds), CGRectGetMidY(self.pinIconImageView.bounds));
+    
+    CLLocationCoordinate2D centerOfPinInMap = [self.mapView convertPoint:centerOfPin toCoordinateFromView:self.pinIconImageView];
+    
+    return centerOfPinInMap;
 }
 
 @end
