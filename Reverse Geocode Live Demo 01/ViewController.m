@@ -17,6 +17,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *reverseGeocodeLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *pinIconImageView;
 
+@property (assign, nonatomic) BOOL lookup;
+
 @end
 
 @implementation ViewController
@@ -28,6 +30,8 @@
     
     self.reverseGeocodeLabel.text = nil;
     self.reverseGeocodeLabel.alpha = 0.5;
+    
+    self.lookup = NO;
 }
 
 - (void)didReceiveMemoryWarning {
