@@ -48,4 +48,35 @@
     return centerOfPinInMap;
 }
 
+- (void)startReverseGeocodeLocation:(CLLocation *)location {
+    
+    [self.geocoder reverseGeocodeLocation:location completionHandler:^(NSArray *placemarks, NSError *error) {
+        
+        if (error) {
+            UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"There was a problem reverse geocoding" message:[error localizedDescription] preferredStyle:UIAlertControllerStyleAlert];
+            [self presentViewController:alertController animated:YES completion:nil];
+        }
+        
+        // Gran some interesting bits of CLPlacemark and show it. But no dupes.
+        NSMutableSet *mappedPlacesDescriptions = [NSMutableSet new];
+        
+        for (CLPlacemark *placemark in placemarks) {
+            if (nil != placemark.name) {
+                [mappedPlacesDescriptions addObject:placemark.name];
+            }
+            if (nil != placemark.administrativeArea) {
+                [mappedPlacesDescriptions addObject:placemark.administrativeArea];
+            }
+            if (nil != placemark.country) {
+                [mappedPlacesDescriptions addObject:placemark.country];
+            }
+            
+            [mappedPlacesDescriptions addObjectsFromArray:placemark.areasOfInterest];
+            
+            self.reverseGeocodeLabel.text = [[mappedPlacesDescriptions allObjects] componentsJoinedByString:@"\n"];
+            self.reverseGeocodeLabel.alpha = 1.0;
+        }
+    }];
+}
+
 @end
