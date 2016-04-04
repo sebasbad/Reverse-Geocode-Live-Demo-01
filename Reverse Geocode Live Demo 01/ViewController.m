@@ -40,10 +40,17 @@
 }
 
 - (IBAction)reverseGeocodeTapped:(id)sender {
+    [self executeLookup];
+}
+
+
+- (void) executeLookup {
     
-    CLLocationCoordinate2D coordinates = [self locationAtCenterOfMapView];
-    CLLocation *location = [[CLLocation alloc] initWithLatitude:coordinates.latitude longitude:coordinates.longitude];
-    [self startReverseGeocodeLocation:location];
+    if (NO == self.lookup) {
+        CLLocationCoordinate2D coordinates = [self locationAtCenterOfMapView];
+        CLLocation *location = [[CLLocation alloc] initWithLatitude:coordinates.latitude longitude:coordinates.longitude];
+        [self startReverseGeocodeLocation:location];
+    }
 }
 
 - (CLLocationCoordinate2D)locationAtCenterOfMapView {
