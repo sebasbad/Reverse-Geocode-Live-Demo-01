@@ -63,6 +63,7 @@
                     </view>
                     <connections>
                         <outlet property="mapView" destination="r5p-ml-Xmd" id="sm8-sd-V8q"/>
+                        <outlet property="pinIconImageView" destination="cfp-9A-Iow" id="alq-7W-YBH"/>
                         <outlet property="reverseGeocodeLabel" destination="CQA-SY-zM3" id="cKV-t6-fM7"/>
                     </connections>
                 </viewController>

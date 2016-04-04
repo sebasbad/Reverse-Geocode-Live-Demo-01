@@ -15,6 +15,7 @@
 
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
 @property (weak, nonatomic) IBOutlet UILabel *reverseGeocodeLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *pinIconImageView;
 
 @end
 
