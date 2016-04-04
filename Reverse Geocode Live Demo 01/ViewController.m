@@ -39,11 +39,6 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)reverseGeocodeTapped:(id)sender {
-    [self executeLookup];
-}
-
-
 - (void) executeLookup {
     
     if (NO == self.lookup) {
