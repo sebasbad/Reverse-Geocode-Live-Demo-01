@@ -36,6 +36,10 @@
 }
 
 - (IBAction)reverseGeocodeTapped:(id)sender {
+    
+    CLLocationCoordinate2D coordinates = [self locationAtCenterOfMapView];
+    CLLocation *location = [[CLLocation alloc] initWithLatitude:coordinates.latitude longitude:coordinates.longitude];
+    [self startReverseGeocodeLocation:location];
 }
 
 - (CLLocationCoordinate2D)locationAtCenterOfMapView {
