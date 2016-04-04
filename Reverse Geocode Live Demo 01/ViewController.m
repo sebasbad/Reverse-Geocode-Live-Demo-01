@@ -24,6 +24,9 @@
     [super viewDidLoad];
 
     self.geocoder = [[CLGeocoder alloc] init];
+    
+    self.reverseGeocodeLabel.text = nil;
+    self.reverseGeocodeLabel.alpha = 0.5;
 }
 
 - (void)didReceiveMemoryWarning {
