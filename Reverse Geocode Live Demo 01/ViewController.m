@@ -9,7 +9,7 @@
 #import "MapKit/MapKit.h"
 #import "ViewController.h"
 
-@interface ViewController ()
+@interface ViewController () <MKMapViewDelegate>
 
 @property (strong, nonatomic) CLGeocoder *geocoder;
 
@@ -34,9 +34,8 @@
     self.lookup = NO;
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)mapView:(MKMapView *)mapView regionDidChangeAnimated:(BOOL)animated {
+    [self executeLookup];
 }
 
 - (void)executeLookup {
