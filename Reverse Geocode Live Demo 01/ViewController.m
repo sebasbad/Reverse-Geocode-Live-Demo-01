@@ -39,7 +39,7 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void) executeLookup {
+- (void)executeLookup {
     
     if (NO == self.lookup) {
         CLLocationCoordinate2D coordinates = [self locationAtCenterOfMapView];
@@ -82,10 +82,10 @@
             }
             
             [mappedPlacesDescriptions addObjectsFromArray:placemark.areasOfInterest];
-            
-            self.reverseGeocodeLabel.text = [[mappedPlacesDescriptions allObjects] componentsJoinedByString:@"\n"];
-            self.reverseGeocodeLabel.alpha = 1.0;
         }
+        
+        self.reverseGeocodeLabel.text = [[mappedPlacesDescriptions allObjects] componentsJoinedByString:@"\n"];
+        self.reverseGeocodeLabel.alpha = 1.0;
     }];
 }
 
