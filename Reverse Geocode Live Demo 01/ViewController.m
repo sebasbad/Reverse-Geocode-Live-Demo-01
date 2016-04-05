@@ -42,6 +42,9 @@
 - (void)executeLookup {
     
     if (NO == self.lookup) {
+        
+        self.lookup = YES;
+        
         CLLocationCoordinate2D coordinates = [self locationAtCenterOfMapView];
         CLLocation *location = [[CLLocation alloc] initWithLatitude:coordinates.latitude longitude:coordinates.longitude];
         [self startReverseGeocodeLocation:location];
@@ -86,6 +89,8 @@
         
         self.reverseGeocodeLabel.text = [[mappedPlacesDescriptions allObjects] componentsJoinedByString:@"\n"];
         self.reverseGeocodeLabel.alpha = 1.0;
+        
+        self.lookup = NO;
     }];
 }
 
